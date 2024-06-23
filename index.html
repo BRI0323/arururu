@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あの横にるを増やす</title>
+    <!-- Bootstrap CSSのリンク -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            font-size: 48px; /* フォントサイズを大きく設定 */
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="text">あ</span>
+        <div class="button-container">
+            <button class="btn btn-primary" onclick="addCharacter()">ボタン</button>
+            <button class="btn btn-danger" onclick="resetCharacters()">リセット</button>
+        </div>
+    </div>
+
+    <script>
+        function addCharacter() {
+            document.getElementById("text").textContent += "る";
+        }
+
+        function resetCharacters() {
+            document.getElementById("text").textContent = "あ";
+        }
+    </script>
+    <!-- Bootstrap JSと依存ライブラリのリンク（必要な場合） -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
